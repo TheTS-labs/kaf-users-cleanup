@@ -1,48 +1,21 @@
-# ⚡ Node.js Starter Function
+# Kaf's Users Cleanup
 
-A simple starter function. Edit `src/main.js` to get started and create something awesome! 🚀
+A simple function that deletes all users without an active session. This function runs on a schedule every 24 hours.
 
-## 🧰 Usage
+## Usage
 
-### GET /ping
-
-- Returns a "Pong" message.
-
-**Response**
-
-Sample `200` Response:
-
-```text
-Pong
-```
-
-### GET, POST, PUT, PATCH, DELETE /
-
-- Returns a "Learn More" JSON response.
-
-**Response**
-
-Sample `200` Response:
-
-```json
-{
-  "motto": "Build like a team of hundreds_",
-  "learn": "https://appwrite.io/docs",
-  "connect": "https://appwrite.io/discord",
-  "getInspired": "https://builtwith.appwrite.io"
-}
-```
+Send any request to trigger the deletion process.
 
 ## ⚙️ Configuration
 
-| Setting           | Value         |
-| ----------------- | ------------- |
-| Runtime           | Node (18.0)   |
-| Entrypoint        | `src/main.js` |
-| Build Commands    | `npm install` |
-| Permissions       | `any`         |
-| Timeout (Seconds) | 15            |
+| Setting           | Value                          |
+| ----------------- | ------------------------------ |
+| Runtime           | Node (22.0)                    |
+| Entrypoint        | `dist/main.js`                 |
+| Build Commands    | `npm install`, `npm run build` |
+| Permissions       | `users.read`, `users.write`    |
+| Timeout (Seconds) | 900 (effectively no timeout)   |
 
 ## 🔒 Environment Variables
 
-No environment variables required.
+No environment variables are required.
